@@ -58,15 +58,34 @@
           </div>
           <h2 class="text-xl font-bold mt-2 mb-2 text-[#5D2E17]">Unidad 1</h2>
           <p class="text-[#8B4513]/70 text-xs font-medium leading-relaxed mb-6 flex-grow">
-            Contenido introductorio sobre tradiciones locales y comprensión básica
-            del entorno.
+            Contenido introductorio sobre tradiciones locales, vocabulario esencial del entorno, numeración básica y roles familiares.
           </p>
-          <button
-            @click="irAUnidad('Básico')"
-            class="w-full py-3 bg-green-50 text-green-600 border border-green-100 text-xs font-bold rounded-xl hover:bg-green-600 hover:text-white transition-colors"
-          >
-            Comenzar Unidad
-          </button>
+          
+          <div class="grid grid-cols-3 gap-2 mt-auto">
+            <NuxtLink 
+              to="/unidad1" 
+              class="text-center py-2.5 bg-green-50 text-green-600 border border-green-100 text-xs font-bold rounded-xl hover:bg-green-600 hover:text-white transition-colors flex flex-col items-center justify-center gap-1 shadow-sm"
+            >
+              <span class="text-lg">🐾</span>
+              <span>Animales</span>
+            </NuxtLink>
+            
+            <NuxtLink 
+              to="/unidad1-numeros" 
+              class="text-center py-2.5 bg-orange-50 text-[#8B4513] border border-orange-100 text-xs font-bold rounded-xl hover:bg-[#8B4513] hover:text-white transition-colors flex flex-col items-center justify-center gap-1 shadow-sm"
+            >
+              <span class="text-lg">🔢</span>
+              <span>Números</span>
+            </NuxtLink>
+
+            <NuxtLink 
+              to="/unidad1-familia" 
+              class="text-center py-2.5 bg-blue-50 text-blue-600 border border-blue-100 text-xs font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-colors flex flex-col items-center justify-center gap-1 shadow-sm"
+            >
+              <span class="text-lg">👨‍👩‍👧</span>
+              <span>Familia</span>
+            </NuxtLink>
+          </div>
         </div>
 
         <div class="bg-white border border-orange-100 p-6 rounded-3xl group hover:border-amber-400 transition-all shadow-md hover:shadow-xl flex flex-col">
@@ -78,15 +97,18 @@
           </div>
           <h2 class="text-xl font-bold mt-2 mb-2 text-[#5D2E17]">Unidad 2</h2>
           <p class="text-[#8B4513]/70 text-xs font-medium leading-relaxed mb-6 flex-grow">
-            Lectura de cuentos populares y análisis de leyendas de los
-            antepasados.
+            Estructuras gramaticales básicas, reglas de pluralización mediante modificadores y análisis del contexto lingüístico chontal.
           </p>
-          <button
-            @click="irAUnidad('Intermedio')"
-            class="w-full py-3 bg-amber-50 text-amber-600 border border-amber-100 text-xs font-bold rounded-xl hover:bg-amber-500 hover:text-white transition-colors"
-          >
-            Comenzar Unidad
-          </button>
+          
+          <div class="grid grid-cols-1 gap-2 mt-auto">
+            <NuxtLink 
+              to="/unidad2-plural" 
+              class="text-center py-3 bg-amber-50 text-amber-600 border border-amber-100 text-xs font-bold rounded-xl hover:bg-amber-500 hover:text-white transition-colors flex items-center justify-center gap-2 shadow-sm"
+            >
+              <span class="text-xl">📚</span>
+              <span>Reglas del Plural</span>
+            </NuxtLink>
+          </div>
         </div>
 
         <div class="bg-white border border-orange-100 p-6 rounded-3xl group hover:border-[#E67E22] transition-all shadow-md hover:shadow-xl flex flex-col">
@@ -98,12 +120,11 @@
           </div>
           <h2 class="text-xl font-bold mt-2 mb-2 text-[#5D2E17]">Unidad 3</h2>
           <p class="text-[#8B4513]/70 text-xs font-medium leading-relaxed mb-6 flex-grow">
-            Evaluación integral del módulo, resolución de cuestionario y registro
-            de notas.
+            Evaluación integral del módulo interactivo, resolución de cuestionarios de fluidez y registro general de notas.
           </p>
           <button
             @click="irAEvaluacion()"
-            class="w-full py-3 bg-orange-50 text-[#E67E22] border border-orange-100 text-xs font-bold rounded-xl hover:bg-[#E67E22] hover:text-white transition-colors"
+            class="w-full py-3 bg-orange-50 text-[#E67E22] border border-orange-100 text-xs font-bold rounded-xl hover:bg-[#E67E22] hover:text-white transition-colors mt-auto shadow-sm"
           >
             Ir a Evaluación
           </button>
@@ -115,10 +136,8 @@
 </template>
 
 <script setup>
-const irAUnidad = nivel => {
-  alert('Unidad de aprendizaje nivel: ' + nivel + ' seleccionada.')
-}
+// Alerta temporal para la evaluación final hasta que se implemente su vista
 const irAEvaluacion = () => {
-  alert('Abriendo evaluación del sistema Huamelollan...')
+  alert('Abriendo evaluación general del sistema Huamelollan...')
 }
 </script>
